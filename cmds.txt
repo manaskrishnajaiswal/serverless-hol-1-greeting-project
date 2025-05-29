@@ -1,0 +1,29 @@
+HOL - 1: Greeting project
+
+- Develop lambda function code.
+- Zip lambda function code.
+- Create lambda function with cli.
+- Invoke lambda function with cli.
+
+-----------------------------------------------------------------------------
+
+- Develop lambda function code:
+write code logic in index.js file and save it.
+
+- Zip lambda function code:
+Run: zip function.zip index.js
+
+- Create lambda function with cli:
+Get Role:
+aws iam get-role --role-name lambda-ex
+
+Get role arn:
+"Arn": "arn:aws:iam::xx--xx:role/lambda-ex-role"
+
+Run Command:
+aws lambda create-function --function-name greeting --runtime nodejs20.x --zip-file fileb://function.zip --handler index.handler --role arn:aws:iam::xx--xx:role/lambda-ex-role
+
+- Invoke lambda function with cli.
+
+Run Command:
+aws lambda invoke --function-name greeting --cli-binary-format raw-in-base64-out --payload file://event.json response.json
