@@ -15,7 +15,7 @@ Run: zip function.zip index.js
 
 - Create lambda function with cli:
 Get Role:
-aws iam get-role --role-name lambda-ex
+aws iam get-role --role-name lambda-ex-role
 
 Get role arn:
 "Arn": "arn:aws:iam::xx--xx:role/lambda-ex-role"
